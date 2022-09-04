@@ -4,7 +4,6 @@ metadata:
   name: my-app
   labels:
     app: my-app
-
 spec:
   type: NodePort
   ports:
@@ -33,7 +32,7 @@ spec:
     spec:
       containers:
       - name: springboot
-        image: harnesspoc01/springboot: {{.Values.tag_name}}
+        image: harnesspoc01/springboot:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
